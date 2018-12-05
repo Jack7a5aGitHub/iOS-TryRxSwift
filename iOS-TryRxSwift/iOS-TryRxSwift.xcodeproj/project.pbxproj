@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5B90FA21B7677E00BA7A7B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B90F921B7677E00BA7A7B /* HomeViewController.swift */; };
+		0A5B90FD21B782E700BA7A7B /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B90FC21B782E700BA7A7B /* Coffee.swift */; };
+		0A5B910021B788B600BA7A7B /* CoffeeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B90FF21B788B600BA7A7B /* CoffeeCell.swift */; };
+		0A5B910321B78D2700BA7A7B /* NSObject+Classname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910221B78D2700BA7A7B /* NSObject+Classname.swift */; };
+		0A5B910521B79FE200BA7A7B /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910421B79FE200BA7A7B /* CurrencyFormatter.swift */; };
+		0A5B910721B7A20700BA7A7B /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910621B7A20700BA7A7B /* ShoppingCart.swift */; };
+		0A5B910921B7A9D600BA7A7B /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910821B7A9D600BA7A7B /* SegueHandler.swift */; };
+		0A5B910C21B7AB0300BA7A7B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */; };
 		0A71A15921A46F5100BB2943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71A15821A46F5100BB2943 /* AppDelegate.swift */; };
-		0A71A15B21A46F5100BB2943 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71A15A21A46F5100BB2943 /* ViewController.swift */; };
 		0A71A15E21A46F5100BB2943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A71A15C21A46F5100BB2943 /* Main.storyboard */; };
 		0A71A16021A46F5500BB2943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71A15F21A46F5500BB2943 /* Assets.xcassets */; };
 		0A71A16321A46F5500BB2943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A71A16121A46F5500BB2943 /* LaunchScreen.storyboard */; };
@@ -16,9 +23,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5B90F921B7677E00BA7A7B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		0A5B90FC21B782E700BA7A7B /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
+		0A5B90FF21B788B600BA7A7B /* CoffeeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeCell.swift; sourceTree = "<group>"; };
+		0A5B910221B78D2700BA7A7B /* NSObject+Classname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Classname.swift"; sourceTree = "<group>"; };
+		0A5B910421B79FE200BA7A7B /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		0A5B910621B7A20700BA7A7B /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
+		0A5B910821B7A9D600BA7A7B /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		0A71A15521A46F5100BB2943 /* iOS-TryRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-TryRxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A71A15821A46F5100BB2943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0A71A15A21A46F5100BB2943 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0A71A15D21A46F5100BB2943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A71A15F21A46F5500BB2943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A71A16221A46F5500BB2943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +52,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5B90FB21B782CB00BA7A7B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A5B90FC21B782E700BA7A7B /* Coffee.swift */,
+				0A5B910621B7A20700BA7A7B /* ShoppingCart.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A5B90FE21B7888A00BA7A7B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A5B90FF21B788B600BA7A7B /* CoffeeCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A5B910121B788BD00BA7A7B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0A5B910221B78D2700BA7A7B /* NSObject+Classname.swift */,
+				0A5B910421B79FE200BA7A7B /* CurrencyFormatter.swift */,
+				0A5B910821B7A9D600BA7A7B /* SegueHandler.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0A5B910A21B7AADD00BA7A7B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0A5B90F921B7677E00BA7A7B /* HomeViewController.swift */,
+				0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		0A71A14C21A46F5100BB2943 = {
 			isa = PBXGroup;
 			children = (
@@ -59,11 +109,14 @@
 			isa = PBXGroup;
 			children = (
 				0A71A15821A46F5100BB2943 /* AppDelegate.swift */,
-				0A71A15A21A46F5100BB2943 /* ViewController.swift */,
-				0A71A15C21A46F5100BB2943 /* Main.storyboard */,
 				0A71A15F21A46F5500BB2943 /* Assets.xcassets */,
 				0A71A16121A46F5500BB2943 /* LaunchScreen.storyboard */,
 				0A71A16421A46F5500BB2943 /* Info.plist */,
+				0A71A15C21A46F5100BB2943 /* Main.storyboard */,
+				0A5B910A21B7AADD00BA7A7B /* ViewController */,
+				0A5B910121B788BD00BA7A7B /* Extension */,
+				0A5B90FE21B7888A00BA7A7B /* View */,
+				0A5B90FB21B782CB00BA7A7B /* Model */,
 			);
 			path = "iOS-TryRxSwift";
 			sourceTree = "<group>";
@@ -165,8 +218,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A71A15B21A46F5100BB2943 /* ViewController.swift in Sources */,
 				0A71A15921A46F5100BB2943 /* AppDelegate.swift in Sources */,
+				0A5B910521B79FE200BA7A7B /* CurrencyFormatter.swift in Sources */,
+				0A5B90FA21B7677E00BA7A7B /* HomeViewController.swift in Sources */,
+				0A5B90FD21B782E700BA7A7B /* Coffee.swift in Sources */,
+				0A5B910921B7A9D600BA7A7B /* SegueHandler.swift in Sources */,
+				0A5B910321B78D2700BA7A7B /* NSObject+Classname.swift in Sources */,
+				0A5B910021B788B600BA7A7B /* CoffeeCell.swift in Sources */,
+				0A5B910C21B7AB0300BA7A7B /* CartViewController.swift in Sources */,
+				0A5B910721B7A20700BA7A7B /* ShoppingCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
