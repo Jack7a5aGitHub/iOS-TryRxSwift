@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -124,10 +125,17 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L3w-dV-PK9">
                                 <rect key="frame" x="20" y="108.5" width="335" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="checkoutAction:" destination="XuI-iK-5hD" eventType="touchUpInside" id="JN7-no-3Ba"/>
+                                    <segue destination="7ra-p4-rX9" kind="show" identifier="ToCheckout" id="Bas-M4-k3p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Shc-ik-4Th">
                                 <rect key="frame" x="20" y="146.5" width="335" height="30"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="XuI-iK-5hD" eventType="touchUpInside" id="qid-8h-wib"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -154,6 +162,77 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tV-kj-AGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1666" y="777"/>
+        </scene>
+        <!--Billing Info View Controller-->
+        <scene sceneID="3X7-03-CCc">
+            <objects>
+                <viewController id="7ra-p4-rX9" customClass="BillingInfoViewController" customModule="iOS_TryRxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lt1-8S-mGE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="M8H-Vh-MN4">
+                                <rect key="frame" x="8" y="80" width="359" height="130"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="V4z-ql-Msu">
+                                        <rect key="frame" x="0.0" y="0.0" width="359" height="50"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UTh-n7-6a6" customClass="ValidatngTextField" customModule="iOS_TryRxSwift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="305" height="50"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rHO-TI-oIp">
+                                                <rect key="frame" x="309" y="0.0" width="50" height="50"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="RZf-JH-dJR">
+                                        <rect key="frame" x="0.0" y="60" width="359" height="30"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l6q-Qd-AcN" customClass="ValidatngTextField" customModule="iOS_TryRxSwift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="236.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WT-Ca-K83" customClass="ValidatngTextField" customModule="iOS_TryRxSwift" customModuleProvider="target">
+                                                <rect key="frame" x="240.5" y="0.0" width="118.5" height="30"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="l6q-Qd-AcN" firstAttribute="width" secondItem="7WT-Ca-K83" secondAttribute="width" multiplier="2" id="5El-EV-wnk"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x3D-dB-Sg3">
+                                        <rect key="frame" x="0.0" y="100" width="359" height="30"/>
+                                        <state key="normal" title="purchase"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="x3D-dB-Sg3" secondAttribute="trailing" id="Hlq-CC-sLZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="RZf-JH-dJR" secondAttribute="trailing" id="Ibh-ac-xlH"/>
+                                    <constraint firstItem="RZf-JH-dJR" firstAttribute="leading" secondItem="M8H-Vh-MN4" secondAttribute="leading" id="gvM-Cu-V2h"/>
+                                    <constraint firstAttribute="trailing" secondItem="V4z-ql-Msu" secondAttribute="trailing" id="zjE-hH-JES"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="M8H-Vh-MN4" firstAttribute="top" secondItem="aNF-LT-wdz" secondAttribute="top" constant="16" id="IvS-xg-NAj"/>
+                            <constraint firstItem="aNF-LT-wdz" firstAttribute="trailing" secondItem="M8H-Vh-MN4" secondAttribute="trailing" constant="8" id="RR9-9K-gBS"/>
+                            <constraint firstItem="M8H-Vh-MN4" firstAttribute="leading" secondItem="aNF-LT-wdz" secondAttribute="leading" constant="8" id="UEX-fq-sjl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aNF-LT-wdz"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8b-Bv-gbu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2389.5999999999999" y="776.76161919040487"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NEb-N2-Fyq">

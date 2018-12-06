@@ -15,6 +15,9 @@
 		0A5B910721B7A20700BA7A7B /* ShoppingCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910621B7A20700BA7A7B /* ShoppingCart.swift */; };
 		0A5B910921B7A9D600BA7A7B /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910821B7A9D600BA7A7B /* SegueHandler.swift */; };
 		0A5B910C21B7AB0300BA7A7B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */; };
+		0A5B910E21B8BE5900BA7A7B /* BillingInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910D21B8BE5900BA7A7B /* BillingInfoViewController.swift */; };
+		0A5B911021B8D7EC00BA7A7B /* ValidatngTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5B910F21B8D7EC00BA7A7B /* ValidatngTextField.swift */; };
+		0A5B911221B8D8E100BA7A7B /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A5B911121B8D8E100BA7A7B /* RxCocoa.framework */; };
 		0A71A15921A46F5100BB2943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A71A15821A46F5100BB2943 /* AppDelegate.swift */; };
 		0A71A15E21A46F5100BB2943 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A71A15C21A46F5100BB2943 /* Main.storyboard */; };
 		0A71A16021A46F5500BB2943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A71A15F21A46F5500BB2943 /* Assets.xcassets */; };
@@ -31,6 +34,9 @@
 		0A5B910621B7A20700BA7A7B /* ShoppingCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCart.swift; sourceTree = "<group>"; };
 		0A5B910821B7A9D600BA7A7B /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		0A5B910D21B8BE5900BA7A7B /* BillingInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillingInfoViewController.swift; sourceTree = "<group>"; };
+		0A5B910F21B8D7EC00BA7A7B /* ValidatngTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidatngTextField.swift; sourceTree = "<group>"; };
+		0A5B911121B8D8E100BA7A7B /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		0A71A15521A46F5100BB2943 /* iOS-TryRxSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-TryRxSwift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A71A15821A46F5100BB2943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A71A15D21A46F5100BB2943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A5B911221B8D8E100BA7A7B /* RxCocoa.framework in Frameworks */,
 				0AE733BD21A4762E004D69FA /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				0A5B90FF21B788B600BA7A7B /* CoffeeCell.swift */,
+				0A5B910F21B8D7EC00BA7A7B /* ValidatngTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -84,6 +92,7 @@
 			children = (
 				0A5B90F921B7677E00BA7A7B /* HomeViewController.swift */,
 				0A5B910B21B7AB0300BA7A7B /* CartViewController.swift */,
+				0A5B910D21B8BE5900BA7A7B /* BillingInfoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -124,6 +133,7 @@
 		0AE733BB21A4762E004D69FA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A5B911121B8D8E100BA7A7B /* RxCocoa.framework */,
 				0AE733BC21A4762E004D69FA /* RxSwift.framework */,
 			);
 			name = Frameworks;
@@ -204,6 +214,7 @@
 			);
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 			);
 			outputPaths = (
 			);
@@ -224,6 +235,8 @@
 				0A5B90FD21B782E700BA7A7B /* Coffee.swift in Sources */,
 				0A5B910921B7A9D600BA7A7B /* SegueHandler.swift in Sources */,
 				0A5B910321B78D2700BA7A7B /* NSObject+Classname.swift in Sources */,
+				0A5B910E21B8BE5900BA7A7B /* BillingInfoViewController.swift in Sources */,
+				0A5B911021B8D7EC00BA7A7B /* ValidatngTextField.swift in Sources */,
 				0A5B910021B788B600BA7A7B /* CoffeeCell.swift in Sources */,
 				0A5B910C21B7AB0300BA7A7B /* CartViewController.swift in Sources */,
 				0A5B910721B7A20700BA7A7B /* ShoppingCart.swift in Sources */,

@@ -21,7 +21,7 @@ final class HomeViewController: UIViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setup()
     }
 
 }
@@ -32,7 +32,7 @@ extension HomeViewController {
         setupCellConfiguartion()
         setupCellTapHandling()
         setupCartObserver()
-        
+        coffeeTableView.tableFooterView = UIView()
     }
     private func setupCellConfiguartion() {
         //Equivalent of cell for row at index path
