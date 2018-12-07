@@ -8,7 +8,7 @@ Branch version-1.0 is responsive tableView (like Shopping Cart)
 
 To integrate RxSwift into your Xcode project using Carthage, specify it in your Cartfile:
 ```swift
-github "onevcat/Kingfisher" ~> 4.0
+github "ReactiveX/RxSwift" ~> 4.0
 ```
 Then, run the following command to build the Kingfisher framework:
 ```swift
