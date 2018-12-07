@@ -10,7 +10,8 @@ To integrate RxSwift into your Xcode project using Carthage, specify it in your 
 ```swift
 github "ReactiveX/RxSwift" ~> 4.0
 ```
-Then, run the following command to build the Kingfisher framework:
+Then, run the following command to build the RxSwift framework:
 ```swift
 $ carthage update
 ```
+For more details, please check at https://github.com/ReactiveX/RxSwift
