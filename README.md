@@ -3,6 +3,7 @@
 First time to use RxSWift which is useful for building responsive app.
 
 ```swift
+
 //MARK: - Rx Setup
     // asObservable - emit notifications of change
     // asObserver - which is observable, in order to be notified when it has changed.
@@ -12,4 +13,5 @@ First time to use RxSWift which is useful for building responsive app.
     //closure inside onNext will be excuted every time the value change
     //disposed - handle the memory
     // subscribe - do changes according to the observable object
+    
 ```
