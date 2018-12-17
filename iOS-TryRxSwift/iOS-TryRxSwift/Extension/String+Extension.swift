@@ -143,3 +143,10 @@ extension String {
         return self.replacingOccurrences(of: " ", with: "")
     }
 }
+
+extension String {
+    func index(of aString: String, startingFrom position: Int = 0) -> String.Index? {
+        let start = index(startIndex, offsetBy: position)
+        return self[start...].range(of: aString, options: .literal)?.lowerBound
+    }
+}

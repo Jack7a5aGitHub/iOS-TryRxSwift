@@ -36,6 +36,9 @@ extension HomeViewController {
     }
     private func setupCellConfiguartion() {
         //Equivalent of cell for row at index path
+        // rx = RxCocoa
+        // bind to associate to coffee observable
+        // rx.items -> tableview Cell
         coffee
         .bind(to: coffeeTableView
         .rx
@@ -49,6 +52,10 @@ extension HomeViewController {
     }
     private func setupCellTapHandling() {
         //Equivalent of did select row at index path
+        //value is where array of object is stored
+        //closure inside onNext will be excuted every time the value change
+        //disposed - handle the memory
+        // share the same model to store data (ShoppingCart.sharedCart)
         coffeeTableView.rx.modelSelected(Coffee.self)
             .subscribe(onNext: { coffee in
                 ShoppingCart.sharedCart.coffees.value.append(coffee)
@@ -73,17 +80,3 @@ extension HomeViewController: SegueHandler {
         case GoToCart
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

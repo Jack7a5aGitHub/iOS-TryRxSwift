@@ -24,7 +24,7 @@ class ShoppingCart {
         guard coffees.value.count > 0 else {
             return "🚫☕️"
         }
-        //Unique the chocolates
+        //Unique the coffees
         let setOfCoffees = Set<Coffee>(coffees.value)
         let itemStrings: [String] = setOfCoffees.map {
             mapCoffee in

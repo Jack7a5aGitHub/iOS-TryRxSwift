@@ -35,13 +35,13 @@ final class BillingInfoViewController: UIViewController {
                 assertionFailure("Couldn't get coffee is coming VC!")
                 return
             }
-
             destination.cardType = cardType.value
         }
     }
 }
 
 extension BillingInfoViewController {
+    
     private func setup() {
         self.title = "💳 Info"
         setupCardImageDisplay()
@@ -49,6 +49,10 @@ extension BillingInfoViewController {
     }
     
     //MARK: - RX Setup
+    // asObservable - emit notifications of change
+    // asObserver - which is observable, in order to be notified when it has changed.
+    // You can have multiple Observers listening to an Observable. This means that when the Observable changes,
+    // it will notify all its Observers.
     private func setupCardImageDisplay() {
         cardType.asObservable()
             .subscribe(onNext: { cardType in
@@ -56,12 +60,15 @@ extension BillingInfoViewController {
             })
         .disposed(by: disposeBag)
     }
+    // rx.text -> TextField
     private func setupTextChangeHandling() {
         let creditCardValid = creditCardNumberTextField
             .rx
-            .text.throttle(throttleInterval, scheduler: MainScheduler.instance)
+            .text
+            .throttle(throttleInterval, scheduler: MainScheduler.instance)
             .map{
-                self.validate(cardText: $0 as! String)
+
+                self.validate(cardText: $0)
         }
         creditCardValid
             .subscribe(onNext: { isValid in
@@ -73,7 +80,7 @@ extension BillingInfoViewController {
             .rx
             .text
             .throttle(throttleInterval, scheduler: MainScheduler.instance)
-            .map { self.validate(expirationDateText: $0 as! String) }
+            .map { self.validate(expirationDateText: $0) }
         expirationValid
             .subscribe(onNext: { self.expirationDateTextField.valid = $0 })
             .disposed(by: disposeBag)
@@ -81,7 +88,7 @@ extension BillingInfoViewController {
         let cvvValid = cvvTextField
             .rx
             .text
-            .map { self.validate(cvvText: $0 as! String) }
+            .map { self.validate(cvvText: $0) }
         
         cvvValid
             .subscribe(onNext: { self.cvvTextField.valid = $0 })
@@ -101,7 +108,10 @@ extension BillingInfoViewController {
     
     //MARK: - Validation methods
     
-    func validate(cardText: String) -> Bool {
+    func validate(cardText: String?) -> Bool {
+        guard let cardText = cardText else {
+            return false
+        }
         let noWhitespace = cardText.rw_removeSpaces()
         
         updateCardType(using: noWhitespace)
@@ -121,7 +131,10 @@ extension BillingInfoViewController {
         return noWhitespace.count == self.cardType.value.expectedDigits
     }
     
-    func validate(expirationDateText expiration: String) -> Bool {
+    func validate(expirationDateText expiration: String?) -> Bool {
+        guard let expiration = expiration else {
+            return false
+        }
         let strippedSlashExpiration = expiration.rw_removeSlash()
         
         formatExpirationDate(using: strippedSlashExpiration)
@@ -130,7 +143,10 @@ extension BillingInfoViewController {
         return strippedSlashExpiration.rw_isValidExpirationDate()
     }
     
-    func validate(cvvText cvv: String) -> Bool {
+    func validate(cvvText cvv: String?) -> Bool {
+        guard let cvv = cvv else {
+            return false
+        }
         guard cvv.rw_allCharactersAreNumbers() else {
             //Someone snuck a letter in here.
             return false

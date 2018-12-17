@@ -153,7 +153,7 @@ enum CardType {
             }
             
             let index10 = noSpaces.index(startIndex, offsetBy: 10)
-            let nextSixRange = Range(index4..<index10)
+            let nextSixRange = index4..<index10
             let nextSix = noSpaces[nextSixRange] //noSpaces.substring(with: nextSixRange)
             let remaining = noSpaces.suffix(from: index10) //noSpaces.substring(from: index10)
             return formattedString + nextSix + " " + remaining
@@ -165,7 +165,7 @@ enum CardType {
             }
             
             let index8 = noSpaces.index(startIndex, offsetBy: 8)
-            let nextFourRange = Range(index4..<index8)
+            let nextFourRange = index4..<index8
             let nextFour = noSpaces[nextFourRange] //noSpaces[.substring(with: nextFourRange)]
             formattedString += nextFour + " "
             
@@ -176,7 +176,7 @@ enum CardType {
             }
             
             let index12 = noSpaces.index(startIndex, offsetBy: 12)
-            let followingFourRange = Range(index8..<index12)
+            let followingFourRange = index8..<index12
             let followingFour = noSpaces[followingFourRange] //noSpaces[.substring(with: followingFourRange)]
             let remaining =  noSpaces.suffix(from: index12) //noSpaces.substring(from: index12)
             return formattedString + followingFour + " " + remaining
