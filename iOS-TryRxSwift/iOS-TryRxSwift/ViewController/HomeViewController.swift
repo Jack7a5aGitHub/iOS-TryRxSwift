@@ -55,7 +55,7 @@ extension HomeViewController {
         //value is where array of object is stored
         //closure inside onNext will be excuted every time the value change
         //disposed - handle the memory
-        // share the same model to store data (ShoppingCart.sharedCart)
+        //share the same model to store data (ShoppingCart.sharedCart)
         coffeeTableView.rx.modelSelected(Coffee.self)
             .subscribe(onNext: { coffee in
                 ShoppingCart.sharedCart.coffees.value.append(coffee)

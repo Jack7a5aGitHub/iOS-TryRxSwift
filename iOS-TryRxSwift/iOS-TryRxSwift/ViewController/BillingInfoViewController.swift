@@ -48,7 +48,7 @@ extension BillingInfoViewController {
         setupTextChangeHandling()
     }
     
-    //MARK: - RX Setup
+    //MARK: - Rx Setup
     // asObservable - emit notifications of change
     // asObserver - which is observable, in order to be notified when it has changed.
     // You can have multiple Observers listening to an Observable. This means that when the Observable changes,
@@ -70,6 +70,7 @@ extension BillingInfoViewController {
 
                 self.validate(cardText: $0)
         }
+        // creditCardValid = Observable<Bool>
         creditCardValid
             .subscribe(onNext: { isValid in
                 self.creditCardNumberTextField.valid = isValid
@@ -98,7 +99,7 @@ extension BillingInfoViewController {
             .combineLatest(creditCardValid, expirationValid, cvvValid) {
                 $0 && $1 && $2 //All must be true
         }
-        
+        // to control whether button isenabled
         everythingValid
             .bind(to: purchaseButton.rx.isEnabled).disposed(by: disposeBag)
     }
